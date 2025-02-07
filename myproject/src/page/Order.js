@@ -19,9 +19,9 @@ const Order = () => {
   useEffect(() => {
     const fetchInitialData = async () => {
       try {
-        const [customersResponse, productsResponse] = await Promise.all([
+        const [customersResponse, /*productsResponse */] = await Promise.all([
           axios.get(`${API_URL}customer/`),
-          axios.get(`${API_URL}product/`),
+          // axios.get(`${API_URL}product/`),
         ]);
         setCustomers(customersResponse.data);
         // setProducts(productsResponse.data);

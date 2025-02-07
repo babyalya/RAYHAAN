@@ -25,7 +25,7 @@ const Product = () => {
     };
 
     fetchData();
-  }, []);
+  }, [CATEGORY_API_URL, PRODUCT_API_URL]);
 
   return (
     <div className="container mt-5">
