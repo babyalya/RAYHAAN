@@ -24,7 +24,7 @@ const Order = () => {
           axios.get(`${API_URL}product/`),
         ]);
         setCustomers(customersResponse.data);
-        setProducts(productsResponse.data);
+        // setProducts(productsResponse.data);
       } catch (err) {
         console.error("Error fetching data:", err);
         setError("Failed to load data. Please try again later.");
