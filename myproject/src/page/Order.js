@@ -9,7 +9,7 @@ const Order = () => {
     customer: "",
   });
   const [customers, setCustomers] = useState([]);
-  const [products, setProducts] = useState([]); // Dynamic product list
+  // const [products, setProducts] = useState([]); // Dynamic product list
   const [orderItems, setOrderItems] = useState([]);
   const [error, setError] = useState(null);
 
@@ -41,18 +41,18 @@ const Order = () => {
   };
 
   // Add an item to the order
-  const handleAddItem = (item) => {
-    const existingItem = orderItems.find((i) => i.id === item.id);
-    if (existingItem) {
-      setOrderItems(
-        orderItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-        )
-      );
-    } else {
-      setOrderItems([...orderItems, { ...item, quantity: 1 }]);
-    }
-  };
+  // const handleAddItem = (item) => {
+  //   const existingItem = orderItems.find((i) => i.id === item.id);
+  //   if (existingItem) {
+  //     setOrderItems(
+  //       orderItems.map((i) =>
+  //         i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
+  //       )
+  //     );
+  //   } else {
+  //     setOrderItems([...orderItems, { ...item, quantity: 1 }]);
+  //   }
+  // };
 
   // Submit the order
   const handleSubmit = async (e) => {
